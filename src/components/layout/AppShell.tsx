@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -17,8 +18,8 @@ const BePayLogo = () => (
     <Image
       src="/bepay.png"
       alt="BePay Logo"
-      width={36} // From w-9
-      height={36} // From h-9
+      width={40} // Increased from 36
+      height={40} // Increased from 36
       className="rounded-lg shadow-md group-hover:scale-105 group-hover:shadow-lg transition-all duration-200"
       data-ai-hint="app logo"
     />
@@ -42,17 +43,17 @@ const NavLinks: React.FC<NavLinksProps> = ({ onLinkClick }) => {
           className={cn(
             "flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-all duration-150 ease-in-out",
             "hover:text-primary hover:bg-primary/10",
-            pathname === item.href || (item.href !== '/dashboard' && pathname.startsWith(item.href)) 
-              ? "bg-primary/15 text-primary font-semibold shadow-sm" 
+            pathname === item.href || (item.href !== '/dashboard' && pathname.startsWith(item.href))
+              ? "bg-primary/15 text-primary font-semibold shadow-sm"
               : "hover:bg-accent/5",
             "group"
           )}
         >
-          <item.icon 
+          <item.icon
             className={cn(
-              "h-5 w-5 group-hover:scale-110 transition-transform", 
+              "h-5 w-5 group-hover:scale-110 transition-transform",
               (pathname === item.href || (item.href !== '/dashboard' && pathname.startsWith(item.href))) ? "text-primary" : ""
-            )} 
+            )}
           />
           {item.label}
         </Link>
@@ -86,7 +87,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     localStorage.setItem('theme', newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
-  
+
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsLoading(true);
