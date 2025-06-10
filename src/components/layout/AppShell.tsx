@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image'; // Added import for Image
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, X, Sun, Moon } from 'lucide-react'; // Added Sun/Moon for theme toggle
@@ -10,15 +11,17 @@ import { mainNavItems } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { AnimatedLoader } from '@/components/AnimatedLoader';
 
-// BePay logo (simple text or SVG)
+// BePay logo
 const BePayLogo = () => (
   <Link href="/dashboard" className="flex items-center gap-2 group">
-    <div 
-      className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl shadow-md group-hover:scale-105 group-hover:shadow-lg transition-all duration-200"
-      data-ai-hint="3d app logo"
-    >
-      B
-    </div>
+    <Image
+      src="/bepay.png"
+      alt="BePay Logo"
+      width={36} // From w-9
+      height={36} // From h-9
+      className="rounded-lg shadow-md group-hover:scale-105 group-hover:shadow-lg transition-all duration-200"
+      data-ai-hint="app logo"
+    />
     <span className="font-headline text-2xl font-bold text-foreground group-hover:text-primary transition-colors">BePay</span>
   </Link>
 );
