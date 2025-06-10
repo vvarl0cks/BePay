@@ -12,7 +12,7 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        code: ['monospace', 'Menlo', 'Consolas', '"Liberation Mono"', '"Courier New"'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,10 +88,16 @@ export default {
             height: '0',
           },
         },
+        // Added for AnimatedLoader, if not using tailwind's default bounce
+        // bounce: { // This is already handled in globals.css, but can be defined here too.
+        //   '0%, 100%': { transform: 'translateY(-15%)', animationTimingFunction: 'cubic-bezier(0.8,0,1,1)' },
+        //   '50%': { transform: 'none', animationTimingFunction: 'cubic-bezier(0,0,0.2,1)' },
+        // },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        // 'bounce': 'bounce 1s infinite', // if defined in keyframes here
       },
     },
   },
