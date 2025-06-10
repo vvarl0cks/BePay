@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image'; // Added import for Image
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 
@@ -6,12 +7,15 @@ export default function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-background via-secondary/20 to-accent/10 p-6 text-center selection:bg-primary/20">
       <div className="mb-10">
-        <div 
-          className="w-36 h-36 bg-primary rounded-3xl flex items-center justify-center text-primary-foreground font-bold text-7xl shadow-2xl transform transition-all hover:scale-105 hover:shadow-primary/40"
-          data-ai-hint="3d logo app"
-        >
-          B
-        </div>
+        <Image
+          src="/bepay.png" 
+          alt="BePay Logo"
+          width={144} 
+          height={144} 
+          className="rounded-3xl shadow-2xl transform transition-all hover:scale-105 hover:shadow-primary/40"
+          data-ai-hint="app logo" 
+          priority // Add priority if it's LCP
+        />
       </div>
       <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground mb-6">
         Welcome to <span className="text-primary drop-shadow-sm">BePay</span>
