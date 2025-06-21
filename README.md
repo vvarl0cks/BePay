@@ -1,4 +1,4 @@
-# My Crypto Wallet App
+# BePay
 
 ## Description
 
@@ -82,11 +82,3 @@ bash
 * **`src/components/`:** Reusable React components, including UI components from Shadcn UI.
 * **`src/hooks/`:** Custom React hooks.
 * **`src/lib/`:** Utility functions, constants, and type definitions.
-
-## Contributing
-
-(Add information on how to contribute if applicable)
-
-## License
-
-(Add license information if applicable)
